@@ -31,6 +31,7 @@ const TodoWrapper = () => {
 
   return (
     <div className="bg-gray-600 p-10">
+        <h1>Todo List</h1>
         <TodoForm addTodo={addTodo} />
         {todos.map((item, index)=> (
             item.isEditing ? (<EditTodoForm editTodo={editTask} task={item} key={index}/>) : (<Todo key={index} task={item} toogleCompleted={toogleCompleted} deleteTodo={deleteTodo} editTodo={editTodo} />)
